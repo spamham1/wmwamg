@@ -11,7 +11,8 @@
 		
 		p 	{max-width: 60%;}
 		
-		fieldset {border: none;}
+		fieldset 	{border: none;}
+		.footer		{position: fixed; left: 0; bottom: 0; width: 100%; }
     </style>
 	
 	<title>WMwamG?</title>
@@ -21,11 +22,9 @@
 	<meta name="author" content="Tenou und Mauxen">
 </head>
 	
-<body>
+<body style="background-image:url(assets/back.jpg)">
 
-<body style="background-image:url(back.jpg)">
-
-<script language="javascript" type="text/javascript" src="script.js"></script>
+<script language="javascript" type="text/javascript" src="assets/massacres.js"></script>
 
 <center>
 
@@ -33,9 +32,10 @@
 
 <h2>Diese spannende Frage wird dir - glücklicherweise - sofort beantwortet!</h2>
 
+<iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
 
 	<fieldset>
-		<form action="/action_page.php" onsubmit="return submiting();" style="outline:none">
+		<form onsubmit="return submiting();" target="hiddenFrame">
 		
 		<label for="day">Gib deinen Geburtstag ein:</label><br>
 		<input type="number" id="day" name="day" min="1" max="31" step="1">
@@ -81,29 +81,19 @@
 
 <br><br>
 
-<center><p id="test"></p></center>
 
-<p>Besucher: 
-	<?php
-
-		include("counter.php");
-		echo $zahl;
-
-	?>
-</p>
-
-</body>
-
-<footer>
-<hr>
-	<center>
+<div class="footer">
+<center>
+		<hr>
 		<p>
 			Erstellt von <a href="https://twitter.com/maux_307" target="_blank">Mauxen</a> und <a href="https://twitter.com/FlngLnhrt">Tenou</a>.
 		</p>
 		<p>
-			Contact <a href="mailto:someone@example.com" target="_blank">someone@example.com</a>.
+			Kontakt: <a href="mailto:sysadmins@cheaperhillsnetwork.de" target="_blank">sysadmins@cheaperhillsnetwork.de</a> | <a href="/imprint.html">Impressum</a> & <a href="/privacy.html">Datenschutzerklärung</a>
 		</p>
-	</center>
-</footer> 
+</center>
+</div>
+
+</body>
 
 </html>
